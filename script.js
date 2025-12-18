@@ -35,9 +35,18 @@ function createGrid(){
         numOfSquares = 0;
     }  
 
+
+    function getRandomColour(){
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        return `rgb(${r},${g},${b})`;
+    }
+
 const grids = document.querySelectorAll('.grid');
 grids.forEach( grid => {grid.addEventListener('mouseover', () =>{
-    grid.style.backgroundColor = 'black';
+    grid.style.backgroundColor = getRandomColour();
 });
 });
 };
